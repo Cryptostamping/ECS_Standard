@@ -6,7 +6,7 @@ ECS01 primarily focuses on rarity factor, i.e a stamping limit that defines the 
 For example, a rarity factor of 9x represents that at any given point of time in internet, there can only be 9 sightings of that stamp. That is if you wish to stamp it elsewhere, you have to remove it from where you have stamped before. So when we measure the value a stamp adds to the website, we do it like avg. NFT pricing / stamping limit. 
 
 
-### Constructor
+## Constructor
 
 The default ECS constructor is 
 `ECS01  (uint256 maxCount_ ,bool setconstRarity_ , uint256 constRarity_ )` 
@@ -15,15 +15,15 @@ The default ECS constructor is
 - `seconstconstRarity_` is bool to decide if rarity is constant across all the nfts in collection. 
 - `constRarity_` is the value of rarity if seconstconstRarity_ is set to `true`.
 
-### Implementation
+## Implementation
 
-`ECS01(999,false,0)` represents a collection with a max limit of 999 NFT/Stamps with variable rarity based on token ID, set using `_setRarityIndex(uint256 _tokenid, uint256 _rarity)`
+- `ECS01(999,false,0)` represents a collection with a max limit of 999 NFT/Stamps with variable rarity based on token ID, set using `_setRarityIndex(uint256 _tokenid, uint256 _rarity)`
 
-`ECS01(999,true,55)` represents a collection with a max limit of 999 NFT/Stamps with constant rarit of 55 for each NFT/Stamp.
+- `ECS01(999,true,55)` represents a collection with a max limit of 999 NFT/Stamps with constant rarit of 55 for each NFT/Stamp.
 
-`ECS01(999,true,0)` represents a collection with a max limit of 999 NFT/Stamps with constant rarit of 0 which stands for infinity i.e there is no stamping limit and hence no value addition.
+- `ECS01(999,true,0)` represents a collection with a max limit of 999 NFT/Stamps with constant rarit of 0 which stands for infinity i.e there is no stamping limit and hence no value addition.
 
-### Example
+# Example
 
 The `cutouts.sol` contract extends Openzeppelin's ERC721 contract (version 4.4.1). Tested and deployed using Remix. Currently deployed onto the Rinkeby network. Cutouts NFt is importing ECS01 stantard to add cryptostamping functionality.
 
@@ -51,7 +51,7 @@ function createCutOut(string memory tokenURI , uint256 rarity , address to)
     }
 ```
 
-### Functions
+# Functions
 
 `_setRarityIndex(uint256 _tokenid, uint256 _rarity)` is used to set/change the rarity of each of the tokenid 
 
